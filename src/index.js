@@ -44,7 +44,7 @@ class DBBackuper
                 }
             }).then(() => {
                 const d = new Date(Date.now());
-                const args = ['--quiet', '--uri', this.getEnv().MONGO_URL, `--archive=${path}/${this.makeName(d)}.gz`, '--gzip'];
+                const args = ['--uri', this.getEnv().MONGO_URL, `--archive=${path}/${this.makeName(d)}.gz`, '--gzip'];
 
                 if (!this.isV())
                 {
