@@ -14,12 +14,12 @@ class DBBackuper
 
         if (this.getEnv().DO_MONTHLY)
         {
-            this.startJob('* * * 1 * *', 'monthly');
+            this.startJob('1 1 1 1 * *', 'monthly');
         }
 
         if (this.getEnv().DO_DAILY)
         {
-            this.startJob('* * 1 * * *', 'daily', 3600 * 24 * 30);
+            this.startJob('1 1 1 * * *', 'daily', 3600 * 24 * 30);
         }
 
         // this is only for debugging
