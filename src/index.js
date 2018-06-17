@@ -22,10 +22,15 @@ class DBBackuper
             this.startJob('1 1 1 * * *', 'daily', 3600 * 24 * 30);
         }
 
+        if (this.getEnv().DO_HOURLY)
+        {
+            this.startJob('1 1 * * * *', 'hourly');
+        }
+
         // this is only for debugging
         if (this.getEnv().DO_MINUTELY)
         {
-            this.startJob('1 * * * * *', 'minutely', 3600);
+            this.startJob('1 * * * * *', 'minutely');
         }
         // if (this.getEnv().DO_SECONDLY)
         // {
