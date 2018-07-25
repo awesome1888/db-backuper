@@ -118,7 +118,7 @@ class DBBackuper
 
     makeName(d)
     {
-        return `${this.pad(d.getUTCHours())}-${this.pad(d.getUTCMinutes())}---${this.pad(d.getUTCDate())}-${this.pad(d.getUTCMonth())}-${this.pad(d.getUTCFullYear())}`;
+        return `${this.pad(d.getUTCHours())}-${this.pad(d.getUTCMinutes())}---${this.pad(d.getUTCDate())}-${this.pad(d.getUTCMonth() + 1)}-${this.pad(d.getUTCFullYear())}`;
     }
 
     pad(value)
